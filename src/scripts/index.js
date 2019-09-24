@@ -1,3 +1,13 @@
-import '../styles/index.scss';
+import LocalStorageController from "./LocalStorageController";
+import Form from "./Form";
+import List from "./List";
 
-console.log('webpack starterkit');
+import "../styles/index.scss";
+
+const DB = new LocalStorageController();
+const form = new Form("add-form", DB);
+const list = new List('list', DB, Form);
+
+[form, list].forEach(item => {
+  item.start();
+});

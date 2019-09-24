@@ -2,11 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>webpack starterkit</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
 </head>
 <body>
-  <h1>webpack starter</h1>
-  <p>✨ A lightweight foundation for your next webpack based frontend project.</p>
+  <div id="app">
+    <div class="form">
+      <form action="" id="add-form">
+        <input type="text" id="author" name="author" value="" placeholder="Автор">
+        <input type="text" id="year" name="year" value="" placeholder="Год издания">
+        <input type="text" id="name" name="bookName" value="" placeholder="Название">
+        <input type="text" id="count" name="count" value="" placeholder="Кол-во страниц">
+        <button type="submit" class="add">Добавить</button>
+      </form>
+    </div>
+    <div class="books">
+      <h1>Список книг</h1>
+      <ul class="books__list" id="list"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

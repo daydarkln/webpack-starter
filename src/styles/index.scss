@@ -1,5 +1,99 @@
-$body-color: blue;
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-body {
-  color: $body-color;
+
+#app {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  width: 768px;
+  margin: 0 auto;
+}
+
+form {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 30px;
+  background: rgba(42,122,55, .3);
+}
+
+input {
+  padding: 10px;
+  outline: none;
+  border: 1px solid lightgray;
+  -webkit-appearance: none;
+  margin: 10px 0;
+}
+input:focus {
+  border-color: green;
+  box-shadow: none;
+}
+button {
+  padding: 10px;
+  background: white;
+  border: none;
+  -webkit-appearance: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.books {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.books__item {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding: 20px;
+  margin-bottom: 30px;
+  background: rgba(42,122,55, .3);
+}
+
+.books__item span {
+  font-family: Arial, sans-serif;
+  margin-bottom: 10px;
+}
+
+.del,
+.edit {
+  color: white;
+  font-weight: 600;
+}
+
+.del {
+  background: coral;
+
+}
+
+.edit {
+  background: lightgreen;
+}
+
+@media (max-width: 768px) {
+  #app {
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  ul {
+    padding: 0;
+  }
 }
