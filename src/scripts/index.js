@@ -6,8 +6,10 @@ import "../styles/index.scss";
 
 const DB = new LocalStorageController();
 const form = new Form("add-form", DB);
-const list = new List('list', DB, Form);
+const list = new List("list", DB, Form);
 
 [form, list].forEach(item => {
   item.start();
 });
+
+DB.start(list, form);

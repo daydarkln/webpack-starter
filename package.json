@@ -47,6 +47,9 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.4.0",
-    "core-js": "^3.0.1"
+    "bulma": "^0.7.5",
+    "core-js": "^3.0.1",
+    "ramda": "^0.26.1",
+    "uuid": "^3.3.3"
   }
 }

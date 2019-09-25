@@ -15,23 +15,23 @@ export default class List {
     this.db.deleteItem(id);
   }
 
+  drop() {
+    this.target.querySelector("ul").remove();
+  }
+
   render() {
-    debugger;
     const list = document.createElement("ul");
+    list.classList.add("book__list");
     this.target.append(list);
 
     const books = this.db.getByKey("bookList", []);
     books.map(book => {
-      const bookItem = new Item(book);
+      const bookItem = new Item(book, this.db);
       bookItem.render(list);
     });
   }
 
   start() {
     this.render();
-    window.addEventListener("storage", function() {
-      console.log("storage updated");
-      this.render();
-    });
   }
 }
